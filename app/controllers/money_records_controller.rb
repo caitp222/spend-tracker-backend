@@ -1,4 +1,4 @@
-class SpendRecordsController < ApplicationController
+class MoneyRecordsController < ApplicationController
 
   def index
   end
@@ -16,7 +16,7 @@ class SpendRecordsController < ApplicationController
   end
 
   private
-  def spend_records_params
+  def money_records_params
   end
 
 end

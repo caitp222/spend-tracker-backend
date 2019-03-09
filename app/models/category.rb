@@ -1,8 +1,8 @@
 class Category < ApplicationRecord
-  validates :name, :color_hex, :type, presence: :true
+  validates :name, :color_hex, :category_type, presence: :true
+  validates :category_type, inclusion: { in: ["incoming", "spend"] }
 
   belongs_to :user
-  has_many :spend_records
-  has_many :incoming_records
+  has_many :money_records
 
 end

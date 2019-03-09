@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190309163237) do
+ActiveRecord::Schema.define(version: 20190309171416) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,26 +18,17 @@ ActiveRecord::Schema.define(version: 20190309163237) do
   create_table "categories", force: :cascade do |t|
     t.string "name", null: false
     t.string "color_hex", null: false
-    t.string "type", null: false
+    t.string "category_type", null: false
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "incoming_records", force: :cascade do |t|
+  create_table "money_records", force: :cascade do |t|
     t.datetime "date", null: false
     t.float "amount", null: false
     t.string "description", null: false
-    t.integer "user_id", null: false
-    t.integer "category_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "spend_records", force: :cascade do |t|
-    t.datetime "date", null: false
-    t.float "amount", null: false
-    t.string "description", null: false
+    t.string "record_type", null: false
     t.integer "user_id", null: false
     t.integer "category_id", null: false
     t.datetime "created_at", null: false
