@@ -1,4 +1,4 @@
-class CategoryRecord < ApplicationRecord
+class Category < ApplicationRecord
   validates :name, :color_hex, :type, presence: :true
 
   belongs_to :user
