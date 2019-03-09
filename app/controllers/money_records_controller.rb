@@ -6,7 +6,7 @@ class MoneyRecordsController < ApplicationController
   def create
   end
 
-  def edit
+  def update
   end
 
   def show
